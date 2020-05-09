@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Haushaltshilfe.css">
+    <script src="Haushaltshilfe.js"></script>
+</head>
+<body>
+    <header>
+		<h1>Household help!</h1>
+		<p>We will help you! Stay at home and stay healthy!</p>
+	</header>
+    <div>
+        <form id="formShopping">
+            <div id="divShopping">
+                <h2>Shopping</h2>
+                <p>Charge: 5 Euro/Shopping</p>
+                <fieldset>
+                    <legend>item</legend>
+                    <select name="item" id="item">
+                        <option value="Srawberries" price="5">Strawberries</option>
+                        <option value="Eggs" price="0.40">Eggs</option>
+                        <option value="Milk" price="2">Milk</option>
+                        <option value="Cheese" price="10">Cheese</option>
+                        <option value="Flour" price="3.40">Flour</option>
+                        <option value="Suger" price="3.10">Suger</option>
+                        <option value="Soap" price="3">Soap</option>
+                        <option value="Orangejuice" price="2.15">Orangejuice</option>
+                        <option value="Shampoo" price="3.55">Shampoo</option>
+                        <option value="Onions" price="2.98">Onions</option>
+                        <option value="Bananas" price="1">Bananas</option>
+                        <option value="Icecream" price="7.24">Icecream</option>
+                        <option value="Carrots" price="10">Carrots</option>
+                        <option value="Apple" price="0.78">Apple</option>
+                        <option value="Bread" price="3.20">Bread</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>quantity</legend>
+                    <input type="number" id="quantity" name="quantity" step="0.25">
+                </fieldset>
+                <fieldset>
+                    <legend>unit</legend>
+                    <input type="radio" name="unit" id="l" value="l"/>
+                    <label for="l">l</label>
+                    <input type="radio" name="unit" id="kg" value="kg"/>
+                    <label for="kg">kg</label>
+                    <input type="radio" name="unit" id="piece" value="piece"/>
+                    <label for="piece">piece</label>
+                </fieldset>
+                <fieldset>
+                    <legend>shop</legend>
+                    <input type="checkbox" name="shop" id="Edeka" value="Edeka">
+                    <label for="Edeka">Edeka</label>
+                    <input type="checkbox" name="shop" id="Rewe" value="Rewe">
+                    <label for="Rewe">Rewe</label>
+                    <input type="checkbox" name="shop" id="Lidl" value="Lidl">
+                    <label for="Lidl">Lidl</label>
+                    <input type="checkbox" name="shop" id="DM" value="DM">
+                    <label for="DM">DM</label>
+                </fieldset>
+            </div>
+        </form>
+    
+        <form id="formWork">
+            <div id="divWork">
+                    <h2>Domestic Work</h2>
+                    <p>Charge: 
+                        laundry 10 Euro; 
+                        cleaning 20 Euro; 
+                        cooking 10 Euro; 
+                        tidy up 10 Euro; 
+                        remove trash 10 Euro
+                    </p>
+                    <fieldset>
+                        <select name="work" id="work">
+                            <option value="Laundry" price="10">Laundry</option>
+                            <option value="Cleaning" price="20">Cleaning</option>
+                            <option value="Cooking" price="10">Cooking</option>
+                            <option value="TidyUp" price="10">Tidy up</option>
+                            <option value="RemoveTrash" price="2">Remove Trash</option>
+                        </select>
+                    </fieldset>
+            </div>
+        </form>
+	</div>
+	<div id="yourOrder">
+        <h2>Your order</h2>
+        <h3>Shopping list</h3>
+            <div id="shoppingOrder">
+                ...
+            </div>
+        <h3>Domestic work</h3>
+            <div id="domesticWorkOrder">
+                ...
+            </div>
+	</div>
+
+</body>
+</html>
