@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="L04_Haushaltshilfe.css">
+    <script src="L05_generateContent.js"></script> 
+    <script src="L05_Haushaltshilfe.js"></script>
+</head>
+<body>
+    <header>
+		<h1>Household help!</h1>
+		<p>We will help you! Stay at home and stay healthy!</p>
+	</header>
+    <div>
+        <form id="form">
+            <div>
+                <h2>Shopping</h2>
+                <p>Charge: 5 Euro/Shopping</p>
+                <fieldset id="shoppingItemChoice">
+                    <legend>item</legend>
+                </fieldset>
+                <fieldset>
+                    <legend>quantity</legend>
+                    <input type="number" id="quantity" name="quantity" value="1" step="0.25">
+                </fieldset>
+                <fieldset>
+                    <legend>unit</legend>
+                    <input type="radio" name="unit" id="l" value="l"/>
+                    <label for="l">l</label>
+                    <input type="radio" name="unit" id="kg" value="kg"/>
+                    <label for="kg">kg</label>
+                    <input type="radio" name="unit" id="piece" value="piece"/>
+                    <label for="piece">piece</label>
+                </fieldset>
+            </div>
+        </form>
+	</div>
+	<div id="yourOrder">
+        <h2>Your order</h2>
+        <h3>Shopping list</h3>
+            <div id="shoppingOrder">
+                ...
+            </div>
+
+            <button type="reset" form="form">Reset</button> 
+            <button type="button" form="form">Order</button>
+	</div>
+
+</body>
+</html>
