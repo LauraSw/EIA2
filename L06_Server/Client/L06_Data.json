@@ -1,0 +1,20 @@
+{
+    "itemChoice": [
+    {
+        "name": "strawberries",
+        "price": 5.00
+    },
+    {
+        "name": "eggs",
+        "price": 20
+    },
+    {
+        "name": "milk",
+        "price": 2.00
+    }
+]
+}
+
+
+
+

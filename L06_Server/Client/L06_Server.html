@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haushaltshilfe06</title>
+    <link rel="stylesheet" href="L06_Server.css">
+
+    <script src="L06_generateContent.js" type="text/javascript" charset="utf-8"></script> 
+    <script src="L06_Server.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <header>
+		<h1>Household help!</h1>
+		<p>We will help you! Stay at home and stay healthy!</p>
+	</header>
+    <div>
+        <form id="orderForm" method="GET">
+            <div>
+                <h2>Shopping</h2>
+                <p>Charge: 5 Euro/Shopping</p>
+                <fieldset id="itemChoice">
+                    <legend>item</legend>
+                </fieldset>
+                <fieldset>
+                    <legend>quantity</legend>
+                    <input type="number" id="quantity" name="quantity" value="1" step="0.25">
+                </fieldset>
+            </div>
+        </form>
+	</div>
+	<div>
+            <h2>Your order</h2>
+            <div id="order">
+                ...
+            </div>
+
+            <button type="reset" form="orderForm">Reset</button> 
+            <button type="button" form="orderForm">Order</button>
+	</div>
+
+</body>
+</html>

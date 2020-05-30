@@ -1,4 +1,4 @@
-namespace Sequenzmemory {
+/*namespace Sequenzmemory {
 
 let input:string = inputEingabe;
 input.length
@@ -6,3 +6,4 @@ input.length
 document.getElementById("TimeIsUp").innerHTML= "Time is up!";
 
 }
+*/

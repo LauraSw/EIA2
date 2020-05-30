@@ -1,4 +1,4 @@
-namespace Haushaltshilfe {
+/*  namespace Haushaltshilfe {
     window.addEventListener("load", handleLoad);
 
     function handleLoad(_event: Event): void {
@@ -16,14 +16,14 @@ namespace Haushaltshilfe {
 
         let formDataShopping: FormData = new FormData(document.forms[0]);
         for (let entry of formDataShopping) {
-            let item: HTMLInputElement = <HTMLInputElement>document.querySelector("[value='" +  entry[1] + "']");
+           let item: HTMLInputElement = <HTMLInputElement>document.querySelector("[value='" +  entry[1] + "']");
             let quantity:HTMLInputElement = ; 
-            let unit:HTMLInputElement =;
-            let shop:HTMLInputElement=;
-            let price: number = Number(item.getAttribute("price"));
+           let unit:HTMLInputElement =;
+          let shop:HTMLInputElement=;
+           let price: number = Number(item.getAttribute("price"));
             
 
-            shoppingOrder.innerHTML += quantity.value + unit.value + item.name + price + "  € ";
+           // shoppingOrder.innerHTML += quantity.value + unit.value + item.name + price + "  € ";
             console.log(formDataShopping);
         }
     }
@@ -41,3 +41,4 @@ namespace Haushaltshilfe {
         }
     }
 }
+*/

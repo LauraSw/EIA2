@@ -1,4 +1,4 @@
-namespace L04_Haushaltshilfe {
+/*namespace L04_Haushaltshilfe {
     window.addEventListener("load", handleLoad);
     let totalShopping:number = 5;
     let totalWork:number=0;
@@ -51,3 +51,4 @@ namespace L04_Haushaltshilfe {
         }
     }
 }
+*/

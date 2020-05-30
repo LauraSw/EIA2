@@ -6,7 +6,7 @@ var L05_Haushaltshilfe;
     let shoppingList = "";
     async function handleLoad(_event) {
         console.log("Start");
-        let response = await fetch("Data.json");
+        let response = await fetch("L05_Data.json");
         let offer = await response.text();
         let data = JSON.parse(offer);
         L05_Haushaltshilfe.generateContent(data);

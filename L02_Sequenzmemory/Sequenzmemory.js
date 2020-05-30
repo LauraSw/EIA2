@@ -1,8 +1,11 @@
 "use strict";
-var Sequenzmemory;
-(function (Sequenzmemory) {
-    let input = inputEingabe;
-    input.length;
-    document.getElementById("TimeIsUp").innerHTML = "Time is up!";
-})(Sequenzmemory || (Sequenzmemory = {}));
+/*namespace Sequenzmemory {
+
+let input:string = inputEingabe;
+input.length
+
+document.getElementById("TimeIsUp").innerHTML= "Time is up!";
+
+}
+*/ 
 //# sourceMappingURL=Sequenzmemory.js.map
