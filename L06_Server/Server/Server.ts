@@ -1,19 +1,41 @@
 import *  as Http from "http";
 import * as Url from "url";
+import * as Mongo from "mongodb"; 
 
 export namespace L06_Server {
-   let server: Http.Server= Http.createServer();
 
-   let port : number | string | undefined = process.env.PORT;
-   if (port == undefined)
+    interface Order {
+        [type: string]: string | string[];
+    }
+
+    let orders: Mongo.Collection;
+
+    let port : number | string | undefined = process.env.PORT;
+    if (port == undefined)
         port = 5001;
 
-    console.log("Server starting on port" + port);
+    let databaseUrl: string = "mongodb://localhost:27017";
 
-   server.listen(port);
-   server.addListener("request", handleRequest);
+     startServer(port);  
+     connectToDatabase(databaseUrl);
 
-   function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
+    function startServer(_port: number | string): void {
+        let server: Http.Server= Http.createServer();
+        console.log("Server starting on port" + _port);
+
+        server.listen(_port);
+        server.addListener("request", handleRequest); 
+    }
+
+    async function connectToDatabase(_url:string): Promise<void> {
+        let options: Mongo.MongoClientOptions = {useNewUrlParser: true, useUnifiedTopology: true};
+        let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
+        await mongoClient.connect();
+        orders = mongoClient.db("Haushaltshilfe").collection("Orders");
+        console.log("Database connection", orders !=undefined);
+    }
+
+    function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
        console.log("okay funktioniert");
 
         _response.setHeader("content-type", "text/html; charset=utf-8");
@@ -25,11 +47,18 @@ export namespace L06_Server {
                 _response.write(key + ":" +url.query[key] + "<br/>");
             }
 
-            let jsonString:string = JSON.stringify(url.query);
+            let jsonString: string = JSON.stringify(url.query);
             _response.write(jsonString);
+
+            storeOrder(url.query);
         }
      
        _response.end();
 
    }
+
+   function storeOrder(_order: Order): void{
+        orders.insert(_order);
+   }
 }
+
