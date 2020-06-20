@@ -3,7 +3,7 @@ var L06_Server;
 (function (L06_Server) {
     window.addEventListener("load", handleLoad);
     let form;
-    let url = "http://localhost:5001";
+    let url = "https://haushaltshilfefuereia.herokuapp.com";
     async function handleLoad(_event) {
         console.log("Init");
         let response = await fetch("L06_Data.json");
