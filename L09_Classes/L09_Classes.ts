@@ -89,7 +89,7 @@ function handleLoad(_event: Event): void {
 
     function drawAntibodies(_position: Vector): void {
         console.log("antibodies");
-        crc2.save();
+            crc2.save();
             crc2.translate(_position.x, _position.y),
             crc2.beginPath();
             crc2.moveTo(200, 90)
