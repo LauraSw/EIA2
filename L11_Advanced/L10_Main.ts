@@ -1,4 +1,4 @@
-namespace L10_Inheritance{
+namespace L11_Advanced{
     window.addEventListener("load", handleLoad);
 
     export let crc2: CanvasRenderingContext2D;
