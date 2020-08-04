@@ -10,7 +10,7 @@ namespace L11_Advanced{
     let antibodies: Antibody[] = [];
     let killercells: Killercell[] = [];
 
-    function handleLoad(_event: event) : void {
+    function handleLoad(_event: Event) : void {
 
         let canvas: HTMLCanvasElement | null = document.querySelector("canvas");
         if (!canvas)
